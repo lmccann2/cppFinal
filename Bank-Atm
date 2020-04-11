@@ -1,0 +1,85 @@
+//********************************
+//.cpp
+//Levi McCann
+//Bank ATM Project
+//CIS61 Hendrickson
+//04/11/2020
+//*********************************
+
+
+
+//#include <string>
+#include <stdio.h>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main()
+
+ {
+   //declare and initialize variables
+    double balance, 
+           deposit,
+           withdraw,
+           transfer;
+    int option = 0;
+
+    balance = 500.00; //default balance
+
+
+
+    //do while constuct
+    //Make input menu
+    do{
+    cout<<"**************MENU***************"<<endl;
+    cout<<"**                             **"<<endl;
+    cout<<"**      1. Check Balance       **"<<endl;
+    cout<<"**      2. Deposit             **"<<endl;
+    cout<<"**      3. Withdraw            **"<<endl;
+    cout<<"**      4. Transfer            **"<<endl;;
+    cout<<"**      5. EXIT Program        **"<<endl;
+    cout<<"*********************************" <<endl;
+    cout<<"    Please choose an option: " <<endl;
+    cin>>option ;
+    //switch statement which option
+    switch (option)
+    
+    {
+      case 1: 
+          cout<<"Your balance is: $" <<balance  <<endl;
+            break;
+      case 2:
+          cout<<"How much are you depositing? "<<endl;
+          cin>>deposit ;
+          balance += deposit;
+          cout<<"Current Balance: $" <<balance <<endl;
+            break; 
+       case 3:
+          cout<<"Amount you want to withdraw: $" ;
+          cin>>withdraw ;
+            if (balance < withdraw)
+            
+              cout<<"You do not have enough funds for withdrawal." <<endl;
+             else
+            
+              balance -= withdraw ;
+              cout<<"Account balance: $" <<balance <<endl;
+            
+              break;
+        case 4:
+            cout<<"How much do want to transfer: $" ;
+            cin>> transfer;
+            balance += transfer;
+            cout<<"Balance transfer: $" <<balance <<endl;
+            break;
+      default:
+        cout<<"Invalid option. Please try again:" ;
+        break;
+    }
+
+      } while (option!=5);
+
+   system("pause");
+   return 0;
+ 
+}
