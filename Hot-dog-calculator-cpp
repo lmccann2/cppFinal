@@ -1,0 +1,57 @@
+//**********************************
+//cpp
+//Levi McCann
+//Hot Dog Cal Final
+//CIS 61 Hendrickson
+//04/11/2020
+//**********************************
+
+#include <cmath>
+#include <string>
+#include <iostream>
+using namespace std;
+
+//All variables can be local since does not call function
+int main()
+ {
+int numPeople;
+int buns;
+int hotdogs;
+int hotdogsEach;
+int hotdogsinPkg = 10;
+int hotdogbuns = 8;
+
+int hotdogsNeed =hotdogsNeed = numPeople * hotdogsEach;
+int hotdogbunsNeeded = hotdogsNeed ;
+int exhotdogpkgsNeeded = hotdogsNeed / hotdogsinPkg ;
+int exhotbunspkgNeeded = hotdogsNeed / hotdogbuns ;
+int hotdogpkgrem = hotdogsNeed % hotdogsinPkg ;
+int bunspkgrem = hotdogsNeed % hotdogbuns ;
+   cout<<"Number of people attending cookout: " <<endl;
+   cin>>numPeople ;
+   cout<<"Number of hot dogs each person will eat: " <<endl;
+   cin>> hotdogsEach ;
+   hotdogsNeed = numPeople * hotdogsEach;
+   cout <<"Total number of packages of hotdogs needed is: " <<hotdogsNeed  <<endl;
+
+   //calculations on hotdogs and buns
+   exhotdogpkgsNeeded = hotdogsNeed / hotdogsinPkg ;
+   exhotbunspkgNeeded = hotdogsNeed / hotdogbuns ;
+   hotdogpkgrem = hotdogsNeed % hotdogsinPkg ;
+
+   bunspkgrem = hotdogsNeed % hotdogbuns ;
+
+   //Print how many packages of hot dogs needed
+   cout<<"You will need: " <<exhotdogpkgsNeeded <<" packages of hot dogs. "<<endl;
+
+   //Print how many packages of buns needed
+  cout<<"You will need: " <<exhotbunspkgNeeded <<" pacakges of hot dog buns. " <<endl;
+
+  //print remainder of hot dogs and hot dog buns if any
+  cout<<"You will have: " <<hotdogpkgrem <<" hot dogs remaining. " <<endl;
+
+  cout<<"You will have: " <<bunspkgrem <<" hot dog buns remaining. " <<endl;
+
+   return 0;
+ 
+}
