@@ -1,0 +1,68 @@
+//***********************************
+//cpp
+//Levi McCann
+//Rock Paper Scissors
+//CIS61 Hendrickson
+//04/11/2020
+//***********************************
+
+
+
+
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+#include <iostream>
+using namespace std;
+
+
+int main()
+ {
+//declare variables
+int quit;
+
+//while statement to play game
+while (quit != -1)
+{
+  srand(time(0));
+
+  int userchoice;
+  int randomNum;
+
+  cout<<"********************" <<endl;
+  cout<<"**    1. ROCK     **" <<endl;
+  cout<<"**    2. PAPER    **" <<endl;
+  cout<<"**    3. SCISSORS **" <<endl;
+  cout<<"********************" <<endl;
+  cout<<"   Please enter your choice (enter -1 to exit) " <<endl;
+
+  cin>> userchoice ;
+
+  //randomize number
+  randomNum = (rand() %3) +1;
+//if statements
+
+if (userchoice == -1)
+{
+  return 0;
+}
+if (randomNum ==userchoice)
+  {
+    cout<<"Tie!" <<"You entered: " <<userchoice <<endl;
+  }
+  if ((randomNum == 1 && userchoice == 2) ||          (randomNum == 3 && userchoice == 1) ||          (randomNum == 2 && userchoice == 3))
+    {
+
+    cout<<"You entered " <<userchoice <<". This beats " <<randomNum <<endl;  
+    cout<<"You Win! " <<endl;
+  }
+  else 
+  {
+   cout<<"You lose. " <<endl;
+  }
+
+}
+  return 0;
+  
+}
